@@ -6,8 +6,18 @@ import Image from 'next/image';
 import { ArrowRight, Star, X, Phone, Mail, MessageCircle, Instagram, Facebook, Send } from 'lucide-react';
 import Gallery from '@/components/Gallery';
 
+interface Service {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  price: string;
+  duration: string;
+  features: string[];
+}
+
 export default function Home() {
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,7 +40,7 @@ export default function Home() {
     }
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -38,7 +48,7 @@ export default function Home() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Crear el enlace de mailto con los datos del formulario
     const subject = `Consulta sobre ${formData.service} - ${formData.name}`;
@@ -724,7 +734,7 @@ ${formData.name}`;
               <div className="mb-8">
                 <h3 className="text-xl font-semibold text-gold-400 mb-4">¿Qué incluye?</h3>
                 <ul className="space-y-3">
-                  {selectedService.features.map((feature, index) => (
+                  {selectedService.features.map((feature: string, index: number) => (
                     <li key={index} className="flex items-center">
                       <div className="w-2 h-2 bg-gold-400 rounded-full mr-3 flex-shrink-0"></div>
                       <span className="text-white/80">{feature}</span>
