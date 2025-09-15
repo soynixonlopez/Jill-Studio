@@ -402,7 +402,7 @@ ${formData.name}`;
                         {/* Línea decorativa inferior */}
                         <div className="mt-8 pt-6 border-t border-gold-500/20">
                           <p className="text-gold-300 text-center text-sm italic">
-                            "Cada foto cuenta una historia única"
+                            &ldquo;Cada foto cuenta una historia única&rdquo;
                           </p>
                         </div>
                       </div>
