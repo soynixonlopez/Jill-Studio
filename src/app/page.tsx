@@ -2,11 +2,9 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Star, Users, Heart, Sparkles, Camera, Calendar, Gift, X, Phone, Mail, MessageCircle, Instagram, Facebook, Send } from 'lucide-react';
+import { ArrowRight, Star, X, Phone, Mail, MessageCircle, Instagram, Facebook, Send } from 'lucide-react';
 import Gallery from '@/components/Gallery';
-import HeroGallery from '@/components/HeroGallery';
 
 export default function Home() {
   const [selectedService, setSelectedService] = useState(null);
