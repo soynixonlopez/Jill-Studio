@@ -1,26 +1,247 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000; /* Negro puro */
+  --foreground: #ffffff; /* Blanco profesional */
+  
+  /* Colores personalizados de negro para gradientes profesionales */
+  --black-950: #000000;
+  --black-925: #0a0a0a;
+  --black-900: #111111;
+  --black-850: #1a1a1a;
+  --black-800: #222222;
+  --black-750: #2a2a2a;
+  --black-700: #333333;
+  --black-650: #3a3a3a;
+  --black-600: #404040;
+  --black-550: #4a4a4a;
+  --black-500: #555555;
+  --black-450: #5a5a5a;
 }
 
-@theme inline {
+/* Variables CSS personalizadas */
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #000000; /* Negro puro */
+  color: #ffffff; /* Blanco profesional */
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
+
+/* Asegurar que todo el sitio use el fondo negro */
+html {
+  background: #000000;
+  scroll-behavior: smooth;
+}
+
+/* Efecto smooth scroll personalizado más dinámico */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Transiciones suaves para el scroll */
+html {
+  scroll-padding-top: 80px; /* Espacio para el header fijo */
+}
+
+/* Efecto de scroll suave con easing personalizado */
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Mejorar la experiencia de scroll */
+body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Efectos visuales para el scroll dinámico */
+.section-scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+  z-index: 1000;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+/* Efecto de resplandor en las secciones al hacer scroll */
+section {
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.1);
+}
+
+/* Animación de entrada para las secciones */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-animate {
+  animation: slideInUp 0.8s ease-out;
+}
+
+/* Efecto de parallax sutil */
+.parallax-element {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Estilos para elementos que podrían tener fondo blanco por defecto */
+* {
+  box-sizing: border-box;
+}
+
+/* Permitir gradientes en las secciones */
+section {
+  background: transparent;
+  position: relative;
+}
+
+/* Asegurar que el header mantenga su fondo sólido */
+nav {
+  background: #000000 !important;
+  backdrop-filter: none !important;
+}
+
+/* Asegurar títulos en dorado */
+h1, h2, h3, h4, h5, h6 {
+  color: #f59e0b !important; /* Dorado para todos los títulos */
+}
+
+/* Asegurar menú del header en dorado - SIN fondo */
+nav a {
+  color: #f59e0b !important; /* Dorado para enlaces del menú */
+  background: transparent !important; /* Sin fondo */
+  border: none !important; /* Sin borde */
+  box-shadow: none !important; /* Sin sombra */
+}
+
+nav a:hover {
+  color: #ffffff !important; /* Blanco al hover */
+  background: transparent !important; /* Sin fondo en hover */
+  transform: none !important; /* Sin transformación */
+}
+
+/* Asegurar que los enlaces del header NO tengan fondo dorado */
+header a, nav a {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+header a:hover, nav a:hover {
+  background: transparent !important;
+  transform: none !important;
+}
+
+/* Asegurar botones del banner con fondo dorado - SOLO para botones, no menú */
+main a[href="/servicios"], main a[href="/contacto"] {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  color: #000000 !important;
+  border: 2px solid #f59e0b !important;
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3) !important;
+}
+
+main a[href="/servicios"]:hover, main a[href="/contacto"]:hover {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4) !important;
+  transform: scale(1.05) !important;
+}
+
+/* Asegurar botones del banner principal con fondo dorado - SOLO botones, no menú */
+main a[href="#galeria"], main a[href="#contacto"] {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  color: #000000 !important;
+  border: 2px solid #f59e0b !important;
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3) !important;
+}
+
+main a[href="#galeria"]:hover, main a[href="#contacto"]:hover {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4) !important;
+  transform: scale(1.05) !important;
+}
+
+/* Asegurar todos los botones con fondo dorado */
+.bg-gold-500, .bg-gold-600 {
+  background-color: #f59e0b !important;
+}
+
+       .bg-gold-500:hover, .bg-gold-600:hover {
+         background-color: #fbbf24 !important;
+       }
+
+       /* Estilos para el dropdown */
+       select {
+         background-color: #1a1a1a !important;
+         color: #ffffff !important;
+       }
+
+       select option {
+         background-color: #1a1a1a !important;
+         color: #ffffff !important;
+       }
+
+       /* Asegurar que el botón tenga fondo dorado */
+       button[type="submit"] {
+         background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+         color: #000000 !important;
+       }
+
+       button[type="submit"]:hover {
+         background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+       }
+
+       /* Asegurar botón "Conoce más sobre mí" en la sección Sobre Mí con fondo dorado */
+       #sobre-mi a[href*="instagram.com"] {
+         background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+         color: #000000 !important;
+         border: 2px solid #f59e0b !important;
+         box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3) !important;
+       }
+
+       #sobre-mi a[href*="instagram.com"]:hover {
+         background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+         box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4) !important;
+         transform: scale(1.05) !important;
+       }
+
+       /* Estilo para los iconos de redes sociales en el footer */
+       footer .flex.space-x-4 a {
+         background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+         color: #000000 !important;
+         border: 2px solid #f59e0b !important;
+         box-shadow: 0 5px 15px rgba(245, 158, 11, 0.2) !important;
+         padding: 0.75rem !important;
+         border-radius: 0.5rem !important;
+       }
+
+       footer .flex.space-x-4 a:hover {
+         background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+         box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3) !important;
+         transform: scale(1.1) !important;
+       }
+
