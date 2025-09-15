@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jill Studio - Sitio Web de Fotografía Profesional
 
-## Getting Started
+Un sitio web moderno y profesional para servicios de fotografía, construido con Next.js 14, TypeScript y Tailwind CSS.
 
-First, run the development server:
+## 🚀 Características
 
+- **Diseño Responsivo**: Optimizado para móviles, tablets y desktop
+- **Animaciones Suaves**: Implementadas con Framer Motion
+- **SEO Optimizado**: Meta tags y estructura semántica
+- **Rendimiento**: Carga rápida y optimizado
+- **Accesibilidad**: Cumple con estándares de accesibilidad web
+
+## 📱 Páginas Incluidas
+
+- **Inicio**: Hero section, preview de servicios, estadísticas y CTA
+- **Servicios**: Detalles de cada tipo de fotografía con precios
+- **Sobre Mí**: Información personal, trayectoria y filosofía
+- **Contacto**: Formulario de contacto, información y WhatsApp
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Next.js 14**: Framework React con App Router
+- **TypeScript**: Tipado estático para mayor robustez
+- **Tailwind CSS**: Framework de CSS utilitario
+- **Framer Motion**: Animaciones y transiciones
+- **Lucide React**: Iconos modernos y consistentes
+
+## 🚀 Instalación y Uso
+
+### Prerrequisitos
+- Node.js 18+ 
+- npm o yarn
+
+### Instalación
+
+1. Clona el repositorio:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [tu-repositorio]
+cd jill-studio-web
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Ejecuta el servidor de desarrollo:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador
 
-## Learn More
+### Scripts Disponibles
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` - Ejecuta el servidor de desarrollo
+- `npm run build` - Construye la aplicación para producción
+- `npm run start` - Ejecuta la aplicación en modo producción
+- `npm run lint` - Ejecuta el linter de ESLint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Personalización
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Información de Contacto
+Edita los siguientes archivos para personalizar tu información:
 
-## Deploy on Vercel
+- `src/components/Footer.tsx` - Información de contacto en el footer
+- `src/app/contacto/page.tsx` - Información de contacto en la página de contacto
+- `src/app/sobre-mi/page.tsx` - Información personal
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Colores y Estilos
+Los colores principales se pueden cambiar en `tailwind.config.js` o directamente en las clases de Tailwind CSS.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Contenido
+- Edita el texto en cada página según tus necesidades
+- Actualiza los precios en `src/app/servicios/page.tsx`
+- Modifica las estadísticas en las páginas correspondientes
+
+## 📱 Características Responsivas
+
+- **Mobile First**: Diseño optimizado para móviles
+- **Breakpoints**: sm (640px), md (768px), lg (1024px), xl (1280px)
+- **Navegación Móvil**: Menú hamburguesa en dispositivos pequeños
+- **Imágenes Adaptativas**: Optimizadas para diferentes tamaños de pantalla
+
+## 🎨 Diseño
+
+- **Paleta de Colores**: Púrpura y rosa como colores principales
+- **Tipografía**: Inter font para mejor legibilidad
+- **Espaciado**: Sistema de espaciado consistente con Tailwind
+- **Componentes**: Reutilizables y modulares
+
+## 📧 Integración de Contacto
+
+### WhatsApp
+- Enlace directo a WhatsApp en el footer y página de contacto
+- Reemplaza el número de teléfono con tu número real
+
+### Email
+- Formulario de contacto funcional
+- Enlaces de email en footer y página de contacto
+- Reemplaza las direcciones de email con las tuyas
+
+## 🚀 Despliegue
+
+### Vercel (Recomendado)
+1. Conecta tu repositorio a Vercel
+2. Configura las variables de entorno si es necesario
+3. Despliega automáticamente
+
+### Netlify
+1. Conecta tu repositorio a Netlify
+2. Configura el comando de build: `npm run build`
+3. Directorio de publicación: `out` (si usas export estático)
+
+### Otros Proveedores
+El sitio es compatible con cualquier proveedor que soporte Next.js.
+
+## 📈 SEO y Rendimiento
+
+- **Meta Tags**: Optimizados para redes sociales
+- **Imágenes**: Optimizadas con Next.js Image
+- **Lazy Loading**: Carga diferida de componentes
+- **Core Web Vitals**: Optimizado para métricas de rendimiento
+
+## 🔧 Mantenimiento
+
+### Actualizaciones Regulares
+- Mantén las dependencias actualizadas
+- Revisa el rendimiento periódicamente
+- Actualiza el contenido según sea necesario
+
+### Backup
+- Haz backup regular de tu código
+- Mantén copias de seguridad de las imágenes
+- Documenta cualquier personalización importante
+
+## 📞 Soporte
+
+Para soporte técnico o preguntas sobre el desarrollo:
+- Revisa la documentación de Next.js
+- Consulta la documentación de Tailwind CSS
+- Revisa los issues en el repositorio
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo LICENSE para más detalles.
+
+---
+
+**¡Tu sitio web de fotografía profesional está listo!** 🎉
+
+Recuerda personalizar toda la información de contacto, precios y contenido según tus necesidades específicas.
