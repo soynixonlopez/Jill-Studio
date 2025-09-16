@@ -57,7 +57,7 @@ const nextConfig: NextConfig = {
   
   // Optimización experimental
   experimental: {
-    optimizeCss: true,
+    // optimizeCss: true, // Comentado temporalmente por error de critters
   },
 };
 
