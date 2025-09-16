@@ -56,19 +56,21 @@ export default function Home() {
 
 Mi nombre es ${formData.name} y me interesa contratar tus servicios de ${formData.service}.
 
-Información de contacto:
+📧 INFORMACIÓN DE CONTACTO:
 - Email: ${formData.email}
 - Teléfono: ${formData.phone}
 
-Mensaje:
+💬 MENSAJE:
 ${formData.message}
 
-¡Espero tu respuesta!
+📸 SERVICIO SOLICITADO: ${formData.service}
 
-Saludos,
+¡Espero tu respuesta pronto!
+
+Saludos cordiales,
 ${formData.name}`;
 
-    const mailtoLink = `mailto:infojillstudio@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:jillstudio.pa@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink);
   };
 
@@ -134,42 +136,42 @@ ${formData.name}`;
                </div>
         
                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-0">
-                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch h-[85vh]">
+                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch h-[85vh] lg:h-[85vh] min-h-[120vh] lg:min-h-[85vh]">
                   {/* Columna Izquierda - Contenido (50%) */}
                   <motion.div
                     initial="initial"
                     animate="animate"
                     variants={staggerContainer}
-                    className="flex flex-col justify-center h-full px-12 py-16 max-w-2xl"
+                    className="flex flex-col justify-center h-full px-4 sm:px-8 lg:px-8 py-16 sm:py-20 lg:py-16 max-w-3xl mx-auto lg:mx-0 text-center lg:text-left"
                   >
                        <motion.div variants={fadeInUp} className="mb-8">
                          {/* Título Principal */}
-                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-serif mb-6 text-gold-400 leading-[0.9] tracking-tight">
+                         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold font-serif mb-6 text-gold-400 leading-[0.9] tracking-tight">
                            Hola, soy Jill
                          </h1>
                                
-                         <p className="text-xl md:text-2xl text-white leading-relaxed font-light max-w-lg">
+                         <p className="text-xl sm:text-2xl md:text-3xl lg:text-2xl text-white leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
                            Estoy listo para capturar tus mejores momentos más preciados.
                          </p>
                        </motion.div>
 
-                       <motion.div variants={fadeInUp} className="mb-8">
-                         <p className="text-lg text-gold-200 leading-relaxed font-medium">
+                       <motion.div variants={fadeInUp} className="mb-6">
+                         <p className="text-lg sm:text-xl md:text-2xl lg:text-lg text-gold-200 leading-relaxed font-medium mx-auto lg:mx-0">
                            Especializado en modelos, retratos y eventos únicos.
                          </p>
                        </motion.div>
                     
-                     <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-6">
+                     <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 sm:gap-6 mx-auto lg:mx-0 w-full max-w-sm sm:max-w-none lg:max-w-none mb-0">
                      <a
                        href="#galeria"
-                       className="bg-gradient-to-r from-gold-500 to-gold-600 text-black px-10 py-5 rounded-xl font-bold text-xl hover:from-gold-400 hover:to-gold-500 transition-all duration-300 flex items-center justify-center group shadow-2xl shadow-gold-500/30 hover:shadow-gold-400/40 transform hover:scale-105 border-2 border-gold-400 min-w-[200px]"
+                       className="bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 sm:px-10 lg:px-10 py-6 sm:py-6 lg:py-5 rounded-xl font-bold text-xl sm:text-2xl lg:text-xl hover:from-gold-400 hover:to-gold-500 transition-all duration-300 flex items-center justify-center group shadow-2xl shadow-gold-500/30 hover:shadow-gold-400/40 transform hover:scale-105 border-2 border-gold-400 w-full sm:min-w-[200px] lg:min-w-[200px]"
                      >
                        Ver Proyectos
-                       <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                       <ArrowRight className="ml-3 h-6 w-6 sm:h-7 sm:w-7 lg:h-6 lg:w-6 group-hover:translate-x-1 transition-transform" />
                      </a>
                      <a
                        href="#contacto"
-                       className="bg-gradient-to-r from-gold-500 to-gold-600 text-black px-10 py-5 rounded-xl font-bold text-xl hover:from-gold-400 hover:to-gold-500 transition-all duration-300 flex items-center justify-center group shadow-2xl shadow-gold-500/30 hover:shadow-gold-400/40 transform hover:scale-105 border-2 border-gold-400 min-w-[200px]"
+                       className="bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 sm:px-10 lg:px-10 py-6 sm:py-6 lg:py-5 rounded-xl font-bold text-xl sm:text-2xl lg:text-xl hover:from-gold-400 hover:to-gold-500 transition-all duration-300 flex items-center justify-center group shadow-2xl shadow-gold-500/30 hover:shadow-gold-400/40 transform hover:scale-105 border-2 border-gold-400 w-full sm:min-w-[200px] lg:min-w-[200px]"
                      >
                        Contactar
                      </a>
@@ -181,14 +183,14 @@ ${formData.name}`;
                     initial={{ opacity: 0, x: 60 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative h-full overflow-hidden"
+                    className="relative h-full overflow-hidden hidden lg:block"
                   >
                      <div className="relative w-full h-full">
         <Image
                          src="/assets/images/jillstudio.png"
                          alt="Jill Studio - Fotógrafo Profesional"
                          fill
-                         className="object-cover object-bottom"
+                         className="object-cover object-bottom lg:object-[center_95%]"
           priority
                          sizes="(max-width: 768px) 100vw, 50vw"
                        />
@@ -198,6 +200,27 @@ ${formData.name}`;
                        <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-black-950 via-black-950/80 to-transparent pointer-events-none"></div>
                        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black-950 via-black-950/80 to-transparent pointer-events-none"></div>
                        <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-b from-black-950/40 to-transparent pointer-events-none"></div>
+                     </div>
+                  </motion.div>
+
+                  {/* Imagen para móviles - Debajo del contenido */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="relative w-full h-[40rem] sm:h-[44rem] md:h-[48rem] lg:hidden -mt-8 flex-1"
+                  >
+                     <div className="relative w-full h-full">
+        <Image
+                         src="/assets/images/jillstudio.png"
+                         alt="Jill Studio - Fotógrafo Profesional"
+                         fill
+                         className="object-contain object-top"
+          priority
+                         sizes="100vw"
+                       />
+                       {/* Efecto sutil de brillo */}
+                       <div className="absolute inset-0 bg-gradient-to-br from-gold-500/5 via-transparent to-gold-500/5 pointer-events-none"></div>
                      </div>
                   </motion.div>
                 </div>
@@ -258,7 +281,7 @@ ${formData.name}`;
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover object-[center_20%] group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
@@ -324,11 +347,11 @@ ${formData.name}`;
                   </motion.p>
                 </motion.div>
 
-                {/* Layout con imagen grande superpuesta de manera interesante */}
-                <div className="relative min-h-[800px]">
+                {/* Layout responsive: móvil/tablet centrado, desktop superpuesto */}
+                <div className="relative min-h-[800px] lg:min-h-[800px]">
                   
-                  {/* Grid de fondo con las dos columnas */}
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch min-h-[700px]">
+                  {/* Grid responsive: móvil/tablet centrado, desktop superpuesto */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch min-h-[700px] lg:min-h-[700px]">
                     
                     {/* Columna izquierda - Historia personal */}
                     <motion.div
@@ -336,10 +359,10 @@ ${formData.name}`;
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6 }}
-                      className="relative z-10 flex flex-col justify-center"
+                      className="relative z-10 flex flex-col justify-center lg:justify-center"
                     >
-                      <div className="bg-black-800/60 backdrop-blur-sm rounded-2xl pl-8 pr-30 py-8 border border-gold-500/20 shadow-lg h-full flex flex-col justify-center">
-                        <div className="text-center lg:text-left">
+                      <div className="bg-black-800/60 backdrop-blur-sm rounded-2xl px-8 lg:pr-32 py-8 border border-gold-500/20 shadow-lg h-full flex flex-col justify-center">
+                        <div className="text-center">
                           <h3 className="text-2xl font-bold font-serif text-gold-400 mb-4">
                             Mi Historia
                           </h3>
@@ -361,7 +384,7 @@ ${formData.name}`;
                             href="https://instagram.com/jillstudio.pa"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center bg-gradient-to-r from-gold-300 to-gold-400 text-black px-8 py-4 rounded-xl font-bold text-xl hover:from-gold-200 hover:to-gold-300 transition-all duration-300 group shadow-2xl hover:shadow-gold-400/40 transform hover:scale-105 w-full justify-center border-2 border-gold-200"
+                            className="inline-flex items-center bg-gradient-to-r from-gold-300 to-gold-400 text-black px-8 py-4 rounded-xl font-bold text-xl hover:from-gold-200 hover:to-gold-300 transition-all duration-300 group shadow-2xl hover:shadow-gold-400/40 transform hover:scale-105 w-full justify-center border-2 border-gold-200 cursor-pointer"
                           >
                             <Instagram className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform" />
                             Conoce más sobre mí
@@ -377,9 +400,9 @@ ${formData.name}`;
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6 }}
-                      className="relative z-10 flex flex-col justify-center"
+                      className="relative z-10 flex flex-col justify-center lg:justify-center"
                     >
-                      <div className="bg-black-800/80 backdrop-blur-sm rounded-2xl pl-16 pr-8 py-12 border border-gold-500/30 shadow-2xl h-full flex flex-col justify-between">
+                      <div className="bg-black-800/80 backdrop-blur-sm rounded-2xl px-8 py-12 border border-gold-500/30 shadow-2xl h-full flex flex-col justify-between">
                         <div className="flex-1 flex flex-col justify-center">
                           <h3 className="text-2xl font-bold font-serif text-gold-400 mb-12 text-center">
                             Mi Trayectoria
@@ -417,13 +440,34 @@ ${formData.name}`;
                     </motion.div>
                   </div>
                   
-                  {/* Imagen grande superpuesta exactamente en los bordes */}
+                  {/* Imagen para móviles y tablet - Debajo de las columnas */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="relative w-full max-w-md mx-auto mt-12 lg:hidden"
+                  >
+                    <div className="relative w-full h-96">
+                      <Image
+                        src="/assets/images/jillstudiosentado.png"
+                        alt="Jill Studio - Fotógrafo Profesional"
+                        fill
+                        className="object-contain object-center rounded-2xl shadow-2xl border-2 border-gold-500/40"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                      {/* Efecto de brillo dorado */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-gold-500/20 via-transparent to-gold-500/20 rounded-2xl pointer-events-none"></div>
+                    </div>
+                  </motion.div>
+                  
+                  {/* Imagen grande superpuesta solo en desktop */}
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                     whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.3 }}
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 hidden lg:block"
                   >
                     <div className="relative w-[520px] h-[720px] lg:w-[620px] lg:h-[820px]">
                       <Image
@@ -588,7 +632,7 @@ ${formData.name}`;
                       <div className="mt-auto pt-4">
                         <button
                           type="submit"
-                          className="w-full bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-gold-400 hover:to-gold-500 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl transform hover:scale-105"
+                          className="w-full bg-gradient-to-r from-gold-500 to-gold-600 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-gold-400 hover:to-gold-500 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
                         >
                           Enviar Mensaje
                           <Send className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -613,8 +657,8 @@ ${formData.name}`;
                           <Mail className="h-6 w-6 text-gold-400 mr-4" />
                           <div>
                             <p className="text-white font-medium">Email</p>
-                            <a href="mailto:infojillstudio@gmail.com" className="text-gold-200 hover:text-gold-400 transition-colors">
-                              infojillstudio@gmail.com
+                            <a href="mailto:jillstudio.pa@gmail.com" className="text-gold-200 hover:text-gold-400 transition-colors cursor-pointer">
+                              jillstudio.pa@gmail.com
                             </a>
                           </div>
                         </div>
@@ -622,7 +666,7 @@ ${formData.name}`;
                           <Phone className="h-6 w-6 text-gold-400 mr-4" />
                           <div>
                             <p className="text-white font-medium">WhatsApp</p>
-                            <a href="https://wa.me/50768252312" className="text-gold-200 hover:text-gold-400 transition-colors">
+                            <a href="https://wa.me/50768252312" className="text-gold-200 hover:text-gold-400 transition-colors cursor-pointer">
                               +507 6825-2312
                             </a>
                           </div>
@@ -638,7 +682,7 @@ ${formData.name}`;
                           href="https://instagram.com/jillstudio.pa"
             target="_blank"
             rel="noopener noreferrer"
-                          className="flex items-center p-4 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg hover:from-pink-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 group"
+                          className="flex items-center p-4 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg hover:from-pink-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 group cursor-pointer"
                         >
                           <Instagram className="h-8 w-8 text-white mr-4 group-hover:scale-110 transition-transform" />
                           <div>
@@ -651,7 +695,7 @@ ${formData.name}`;
                           href="https://facebook.com/jillstudio.pa"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center p-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 group"
+                          className="flex items-center p-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 group cursor-pointer"
                         >
                           <Facebook className="h-8 w-8 text-white mr-4 group-hover:scale-110 transition-transform" />
                           <div>
@@ -664,7 +708,7 @@ ${formData.name}`;
                           href="https://tiktok.com/@jillstudio.pa"
           target="_blank"
           rel="noopener noreferrer"
-                          className="flex items-center p-4 bg-gradient-to-r from-black to-gray-800 rounded-lg hover:from-gray-700 hover:to-gray-600 transition-all duration-300 transform hover:scale-105 group"
+                          className="flex items-center p-4 bg-gradient-to-r from-black to-gray-800 rounded-lg hover:from-gray-700 hover:to-gray-600 transition-all duration-300 transform hover:scale-105 group cursor-pointer"
                         >
                           <div className="h-8 w-8 text-white mr-4 group-hover:scale-110 transition-transform flex items-center justify-center">
                             <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -689,28 +733,28 @@ ${formData.name}`;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/90 backdrop-blur-lg z-[100] flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/90 backdrop-blur-lg z-[100] flex items-center justify-center p-6"
           onClick={() => setSelectedService(null)}
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            className="relative max-w-2xl w-full bg-black-800 rounded-2xl overflow-hidden shadow-2xl border border-gold-500/30"
+            className="relative max-w-2xl w-full max-h-[90vh] bg-black-800 rounded-2xl overflow-hidden shadow-2xl border border-gold-500/30 flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Imagen del modal */}
-            <div className="relative h-80 overflow-hidden">
+            <div className="relative h-64 overflow-hidden flex-shrink-0">
           <Image
                 src={selectedService.image}
                 alt={selectedService.title}
                 fill
-                className="object-cover object-center"
+                className="object-cover object-[center_20%]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               <button
                 onClick={() => setSelectedService(null)}
-                className="absolute top-4 right-4 text-white hover:text-gold-400 transition-colors duration-200 z-10 p-2 rounded-full bg-black/50 hover:bg-black/70"
+                className="absolute top-4 right-4 text-white hover:text-gold-400 transition-colors duration-200 z-10 p-2 rounded-full bg-black/50 hover:bg-black/70 cursor-pointer"
               >
                 <X className="h-6 w-6" />
               </button>
@@ -725,13 +769,13 @@ ${formData.name}`;
             </div>
 
             {/* Contenido del modal */}
-            <div className="p-8">
+            <div className="p-6 overflow-y-auto flex-1 modal-scroll">
               <p className="text-white/90 text-lg mb-6 leading-relaxed">
                 {selectedService.description}
               </p>
 
               {/* Características */}
-              <div className="mb-8">
+              <div className="mb-6">
                 <h3 className="text-xl font-semibold text-gold-400 mb-4">¿Qué incluye?</h3>
                 <ul className="space-y-3">
                   {selectedService.features.map((feature: string, index: number) => (
@@ -749,14 +793,15 @@ ${formData.name}`;
                   href="https://wa.me/50768252312"
           target="_blank"
           rel="noopener noreferrer"
-                  className="flex-1 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center group"
+                  className="flex-1 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center group cursor-pointer"
                 >
                   <MessageCircle className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
                   WhatsApp
         </a>
         <a
-                  href="mailto:infojillstudio@gmail.com"
-                  className="flex-1 bg-gold-600 hover:bg-gold-700 text-black px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center group"
+                  href="#contacto"
+                  onClick={() => setSelectedService(null)}
+                  className="flex-1 bg-gold-600 hover:bg-gold-700 text-black px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center group cursor-pointer"
                 >
                   <Mail className="h-5 w-5 mr-2 group-hover:scale-110 transition-transform" />
                   Email

@@ -121,7 +121,7 @@ const Footer = () => {
                   href="mailto:infojillstudio@gmail.com"
                          className="text-white hover:text-gold-400 transition-all duration-300"
                 >
-                  infojillstudio@gmail.com
+                  jillstudio.pa@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3 group">
